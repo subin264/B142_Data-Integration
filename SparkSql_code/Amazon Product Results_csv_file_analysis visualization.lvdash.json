@@ -1,0 +1,2041 @@
+{
+  "datasets": [
+    {
+      "name": "4897a2ff",
+      "displayName": "1_1전체_상품을_조회하되_각_상품의_베스트셀러_여부_정보포함",
+      "queryLines": [
+        "\n",
+        "SELECT * FROM workspace.default.`1_1전체_상품을_조회하되_각_상품의_베스트셀러_여부_정보포함`"
+      ]
+    },
+    {
+      "name": "4cbc0955",
+      "displayName": "1_2_카테고리별_베스트셀러_분포와_비율",
+      "queryLines": [
+        "SELECT * FROM workspace.default.`1_2_카테고리별_베스트셀러_분포와_비율`"
+      ]
+    },
+    {
+      "name": "b0cadf61",
+      "displayName": "2_1_price_distribution_by_category_카테고리별_가격대_분포",
+      "queryLines": [
+        "\n",
+        "SELECT * FROM workspace.default.`2_1_price_distribution_by_category_카테고리별_가격대_분포`"
+      ]
+    },
+    {
+      "name": "bb3421ae",
+      "displayName": "2_3_standard_deviation_by_category_카테고리별_가격_통계_및_변동성_분석",
+      "queryLines": [
+        "\n",
+        "SELECT * FROM workspace.default.`2_3_standard_deviation_by_category_카테고리별_가격_통계_및_변동성_분석`"
+      ]
+    },
+    {
+      "name": "b78b8a50",
+      "displayName": "3_2_숨은_보석에_대한_제품_비율",
+      "queryLines": [
+        "SELECT * FROM `workspace`.`default`.`3_2_숨은_보석에_대한_제품_비율`"
+      ]
+    },
+    {
+      "name": "cc5fabc2",
+      "displayName": "1_리뷰_수_하위_30_이하이면서_별점_4_0_이상_제품들_식별",
+      "queryLines": [
+        "SELECT * FROM workspace.default.`1_리뷰_수_하위_30_이하이면서_별점_4_0_이상_제품들_식별`"
+      ]
+    },
+    {
+      "name": "1e72cad1",
+      "displayName": "3_2_1_리뷰_30_이하",
+      "queryLines": [
+        "SELECT * FROM workspace.default.`3_2_1_리뷰_30_이하`"
+      ]
+    },
+    {
+      "name": "d56728b6",
+      "displayName": "4_카테고리_포지셔닝_매트릭스",
+      "queryLines": [
+        "SELECT * FROM workspace.default.`4_카테고리_포지셔닝_매트릭스`"
+      ]
+    },
+    {
+      "name": "7c2b0b50",
+      "displayName": "4_2_리뷰vs_별점_상관관계_분석",
+      "queryLines": [
+        "SELECT * FROM workspace.default.`4_2_리뷰vs_별점_상관관계_분석`"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "f7872b88",
+      "displayName": "총 결과 분석 데시보드",
+      "layout": [
+        {
+          "widget": {
+            "name": "4329a3c2",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "4cbc0955",
+                  "fields": [
+                    {
+                      "name": "sum(total_products)",
+                      "expression": "SUM(`total_products`)"
+                    },
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                },
+                "y": {
+                  "fieldName": "sum(total_products)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Sum of total_products"
+                },
+                "color": {
+                  "fieldName": "sum(total_products)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Sum of total_products"
+                },
+                "label": {
+                  "show": true
+                }
+              },
+              "frame": {
+                "showDescription": false
+              },
+              "mark": {
+                "colors": [
+                  "#2281B4",
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 16,
+            "width": 6,
+            "height": 9
+          }
+        },
+        {
+          "widget": {
+            "name": "3d8d7d10",
+            "multilineTextboxSpec": {
+              "lines": [
+                ""
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 14,
+            "width": 6,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "67ccf451",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "4cbc0955",
+                  "fields": [
+                    {
+                      "name": "best_selling_ration",
+                      "expression": "`best_selling_ration`"
+                    },
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "best_selling_ration",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "best_selling_ration"
+                },
+                "y": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                },
+                "color": {
+                  "fieldName": "best_selling_ration",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "best_selling_ration"
+                }
+              },
+              "frame": {
+                "showDescription": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 35,
+            "width": 6,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "5d77bf62",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "4cbc0955",
+                  "fields": [
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    },
+                    {
+                      "name": "total_products",
+                      "expression": "`total_products`"
+                    },
+                    {
+                      "name": "best_selling_ration",
+                      "expression": "`best_selling_ration`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "scatter",
+              "encodings": {
+                "x": {
+                  "fieldName": "total_products",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "total_products"
+                },
+                "y": {
+                  "fieldName": "best_selling_ration",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "best_selling_ration"
+                },
+                "color": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                },
+                "size": {
+                  "fieldName": "total_products",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "total_products"
+                }
+              },
+              "annotations": [
+                {
+                  "type": "vertical-line",
+                  "encodings": {
+                    "x": {
+                      "dataValue": "240000",
+                      "dataType": "INTEGER"
+                    }
+                  }
+                },
+                {
+                  "type": "horizontal-line",
+                  "encodings": {
+                    "y": {
+                      "dataValue": "1.5",
+                      "dataType": "DOUBLE"
+                    }
+                  }
+                }
+              ],
+              "mark": {
+                "size": 1.5
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 25,
+            "width": 6,
+            "height": 10
+          }
+        },
+        {
+          "widget": {
+            "name": "09bbc864",
+            "multilineTextboxSpec": {
+              "lines": [
+                "csv 자료 2 단계 시각화 진행 \n"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 60,
+            "width": 6,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "59dce243",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "b0cadf61",
+                  "fields": [
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    },
+                    {
+                      "name": "price_range",
+                      "expression": "`price_range`"
+                    },
+                    {
+                      "name": "products_count",
+                      "expression": "`products_count`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "price_range",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "price_range"
+                },
+                "y": {
+                  "fieldName": "products_count",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "products_count"
+                },
+                "color": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                },
+                "label": {
+                  "show": true
+                }
+              },
+              "frame": {
+                "showDescription": true,
+                "description": "카테고리별 가격대별 분포 "
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 51,
+            "width": 6,
+            "height": 9
+          }
+        },
+        {
+          "widget": {
+            "name": "c8e8556d",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "4897a2ff",
+                  "fields": [
+                    {
+                      "name": "category_name",
+                      "expression": "`category_name`"
+                    },
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 1,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "category_name",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 100004,
+                    "title": "category_name",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false,
+                    "displayName": "category_name"
+                  },
+                  {
+                    "fieldName": "category_type",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 100005,
+                    "title": "category_type",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false,
+                    "displayName": "category_type"
+                  }
+                ]
+              },
+              "invisibleColumns": [
+                {
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "asin",
+                  "type": "string",
+                  "displayAs": "string",
+                  "order": 100000,
+                  "title": "asin",
+                  "allowSearch": false,
+                  "alignContent": "left",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "title",
+                  "type": "string",
+                  "displayAs": "string",
+                  "order": 100001,
+                  "title": "title",
+                  "allowSearch": false,
+                  "alignContent": "left",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "isBestSelling",
+                  "type": "boolean",
+                  "displayAs": "boolean",
+                  "order": 100002,
+                  "title": "isBestSelling",
+                  "allowSearch": false,
+                  "alignContent": "right",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "numberFormat": "0",
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "category_id",
+                  "type": "integer",
+                  "displayAs": "number",
+                  "order": 100003,
+                  "title": "category_id",
+                  "allowSearch": false,
+                  "alignContent": "right",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                }
+              ],
+              "allowHTMLByDefault": false,
+              "itemsPerPage": 25,
+              "paginationSize": "default",
+              "condensed": true,
+              "withRowNumber": false
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 6,
+            "height": 14
+          }
+        },
+        {
+          "widget": {
+            "name": "14c7d3a9",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "bb3421ae",
+                  "fields": [
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    },
+                    {
+                      "name": "total_products",
+                      "expression": "`total_products`"
+                    },
+                    {
+                      "name": "avg_price",
+                      "expression": "`avg_price`"
+                    },
+                    {
+                      "name": "coefficient_of_variation",
+                      "expression": "`coefficient_of_variation`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "scatter",
+              "encodings": {
+                "x": {
+                  "fieldName": "avg_price",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "avg_price"
+                },
+                "y": {
+                  "fieldName": "coefficient_of_variation",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "coefficient_of_variation"
+                },
+                "color": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                },
+                "size": {
+                  "fieldName": "total_products",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "total_products"
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "평균가격 vs 안전성 "
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 62,
+            "width": 6,
+            "height": 9
+          }
+        },
+        {
+          "widget": {
+            "name": "2f71f382",
+            "multilineTextboxSpec": {
+              "lines": [
+                "csv 3"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 71,
+            "width": 6,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "417e5af0",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "b78b8a50",
+                  "fields": [
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    },
+                    {
+                      "name": "ea",
+                      "expression": "`ea`"
+                    },
+                    {
+                      "name": "tea",
+                      "expression": "`tea`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                },
+                "y": {
+                  "primary": {
+                    "fields": [
+                      {
+                        "fieldName": "ea",
+                        "displayName": "ea"
+                      }
+                    ],
+                    "scale": {
+                      "type": "quantitative"
+                    }
+                  },
+                  "secondary": {
+                    "fields": [
+                      {
+                        "fieldName": "tea",
+                        "displayName": "tea"
+                      }
+                    ],
+                    "scale": {
+                      "type": "quantitative"
+                    }
+                  }
+                }
+              },
+              "mark": {
+                "layout": "percent-stack"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 73,
+            "width": 6,
+            "height": 8
+          }
+        },
+        {
+          "widget": {
+            "name": "0bfcc0ef",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "cc5fabc2",
+                  "fields": [
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    },
+                    {
+                      "name": "price",
+                      "expression": "`price`"
+                    },
+                    {
+                      "name": "stars",
+                      "expression": "`stars`"
+                    }
+                  ],
+                  "filters": [
+                    {
+                      "expression": "`category_type` NOT IN ('Others')"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "scatter",
+              "encodings": {
+                "x": {
+                  "fieldName": "price",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "price"
+                },
+                "y": {
+                  "fieldName": "stars",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "stars"
+                },
+                "color": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 81,
+            "width": 6,
+            "height": 14
+          }
+        },
+        {
+          "widget": {
+            "name": "ed518901",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "d56728b6",
+                  "fields": [
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    },
+                    {
+                      "name": "total_products",
+                      "expression": "`total_products`"
+                    },
+                    {
+                      "name": "X_score",
+                      "expression": "`X_score`"
+                    },
+                    {
+                      "name": "Y_score",
+                      "expression": "`Y_score`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "scatter",
+              "encodings": {
+                "x": {
+                  "fieldName": "X_score",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "X_score"
+                },
+                "y": {
+                  "fieldName": "Y_score",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Y_score"
+                },
+                "color": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                },
+                "size": {
+                  "fieldName": "total_products",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "total_products"
+                }
+              },
+              "mark": {
+                "size": 0
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 95,
+            "width": 6,
+            "height": 13
+          }
+        },
+        {
+          "widget": {
+            "name": "36b31dd1",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "7c2b0b50",
+                  "fields": [
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    },
+                    {
+                      "name": "correlation_reviews_stars",
+                      "expression": "`correlation_reviews_stars`"
+                    },
+                    {
+                      "name": "product_count",
+                      "expression": "`product_count`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "scatter",
+              "encodings": {
+                "x": {
+                  "fieldName": "correlation_reviews_stars",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "correlation_reviews_stars"
+                },
+                "y": {
+                  "fieldName": "product_count",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "product_count"
+                },
+                "color": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 108,
+            "width": 6,
+            "height": 11
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS"
+    },
+    {
+      "name": "bc152f42",
+      "displayName": "총 결과 분석 데시보드 1",
+      "layout": [
+        {
+          "widget": {
+            "name": "d41c0138",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "4cbc0955",
+                  "fields": [
+                    {
+                      "name": "sum(total_products)",
+                      "expression": "SUM(`total_products`)"
+                    },
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                },
+                "y": {
+                  "fieldName": "sum(total_products)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Sum of total_products"
+                },
+                "color": {
+                  "fieldName": "sum(total_products)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Sum of total_products"
+                },
+                "label": {
+                  "show": true
+                }
+              },
+              "frame": {
+                "showDescription": false
+              },
+              "mark": {
+                "colors": [
+                  "#2281B4",
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 16,
+            "width": 6,
+            "height": 9
+          }
+        },
+        {
+          "widget": {
+            "name": "42cb5d7f",
+            "multilineTextboxSpec": {
+              "lines": [
+                ""
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 14,
+            "width": 6,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "45978706",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "4cbc0955",
+                  "fields": [
+                    {
+                      "name": "best_selling_ration",
+                      "expression": "`best_selling_ration`"
+                    },
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "best_selling_ration",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "best_selling_ration"
+                },
+                "y": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                },
+                "color": {
+                  "fieldName": "best_selling_ration",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "best_selling_ration"
+                }
+              },
+              "frame": {
+                "showDescription": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 25,
+            "width": 6,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "59f8bdaa",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "4cbc0955",
+                  "fields": [
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    },
+                    {
+                      "name": "total_products",
+                      "expression": "`total_products`"
+                    },
+                    {
+                      "name": "best_selling_ration",
+                      "expression": "`best_selling_ration`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "scatter",
+              "encodings": {
+                "x": {
+                  "fieldName": "total_products",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "total_products"
+                },
+                "y": {
+                  "fieldName": "best_selling_ration",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "best_selling_ration"
+                },
+                "color": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                }
+              },
+              "mark": {
+                "size": 1.5
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 32,
+            "width": 6,
+            "height": 10
+          }
+        },
+        {
+          "widget": {
+            "name": "7c289132",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "4cbc0955",
+                  "fields": [
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    },
+                    {
+                      "name": "best_selling_products",
+                      "expression": "`best_selling_products`"
+                    },
+                    {
+                      "name": "best_selling_ration",
+                      "expression": "`best_selling_ration`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "scatter",
+              "encodings": {
+                "x": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                },
+                "y": {
+                  "fieldName": "best_selling_ration",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "best_selling_ration"
+                },
+                "color": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                },
+                "size": {
+                  "fieldName": "best_selling_products",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "best_selling_products"
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 42,
+            "width": 6,
+            "height": 9
+          }
+        },
+        {
+          "widget": {
+            "name": "e920d7bc",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "4cbc0955",
+                  "fields": [
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    },
+                    {
+                      "name": "sum(total_products)",
+                      "expression": "SUM(`total_products`)"
+                    },
+                    {
+                      "name": "sum(best_selling_products)",
+                      "expression": "SUM(`best_selling_products`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                },
+                "y": {
+                  "primary": {
+                    "fields": [
+                      {
+                        "fieldName": "sum(total_products)",
+                        "displayName": "Sum of total_products"
+                      }
+                    ],
+                    "scale": {
+                      "type": "quantitative",
+                      "reverse": false
+                    },
+                    "axis": {
+                      "hideTitle": false
+                    }
+                  },
+                  "secondary": {
+                    "fields": [
+                      {
+                        "fieldName": "sum(best_selling_products)",
+                        "displayName": "Sum of best_selling_products"
+                      }
+                    ],
+                    "scale": {
+                      "type": "quantitative"
+                    }
+                  }
+                }
+              },
+              "mark": {
+                "layout": "stack"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 51,
+            "width": 6,
+            "height": 9
+          }
+        },
+        {
+          "widget": {
+            "name": "1a1a2232",
+            "multilineTextboxSpec": {
+              "lines": [
+                "csv 자료 2 단계 시각화 진행 \n"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 60,
+            "width": 6,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "df0802ed",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "bb3421ae",
+                  "fields": [
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    },
+                    {
+                      "name": "sum(coefficient_of_variation)",
+                      "expression": "SUM(`coefficient_of_variation`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                },
+                "y": {
+                  "fieldName": "sum(coefficient_of_variation)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Sum of coefficient_of_variation"
+                },
+                "color": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                }
+              },
+              "frame": {
+                "showDescription": true,
+                "description": "가격변동성이 적은 제품"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 62,
+            "width": 6,
+            "height": 9
+          }
+        },
+        {
+          "widget": {
+            "name": "60600ca2",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "4897a2ff",
+                  "fields": [
+                    {
+                      "name": "category_name",
+                      "expression": "`category_name`"
+                    },
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 1,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "category_name",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 100004,
+                    "title": "category_name",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false,
+                    "displayName": "category_name"
+                  },
+                  {
+                    "fieldName": "category_type",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 100005,
+                    "title": "category_type",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false,
+                    "displayName": "category_type"
+                  }
+                ]
+              },
+              "invisibleColumns": [
+                {
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "asin",
+                  "type": "string",
+                  "displayAs": "string",
+                  "order": 100000,
+                  "title": "asin",
+                  "allowSearch": false,
+                  "alignContent": "left",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "title",
+                  "type": "string",
+                  "displayAs": "string",
+                  "order": 100001,
+                  "title": "title",
+                  "allowSearch": false,
+                  "alignContent": "left",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "isBestSelling",
+                  "type": "boolean",
+                  "displayAs": "boolean",
+                  "order": 100002,
+                  "title": "isBestSelling",
+                  "allowSearch": false,
+                  "alignContent": "right",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "numberFormat": "0",
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "category_id",
+                  "type": "integer",
+                  "displayAs": "number",
+                  "order": 100003,
+                  "title": "category_id",
+                  "allowSearch": false,
+                  "alignContent": "right",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                }
+              ],
+              "allowHTMLByDefault": false,
+              "itemsPerPage": 25,
+              "paginationSize": "default",
+              "condensed": true,
+              "withRowNumber": false
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 6,
+            "height": 14
+          }
+        },
+        {
+          "widget": {
+            "name": "12140ea2",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "bb3421ae",
+                  "fields": [
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    },
+                    {
+                      "name": "total_products",
+                      "expression": "`total_products`"
+                    },
+                    {
+                      "name": "avg_price",
+                      "expression": "`avg_price`"
+                    },
+                    {
+                      "name": "coefficient_of_variation",
+                      "expression": "`coefficient_of_variation`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "scatter",
+              "encodings": {
+                "x": {
+                  "fieldName": "avg_price",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "avg_price"
+                },
+                "y": {
+                  "fieldName": "coefficient_of_variation",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "coefficient_of_variation"
+                },
+                "color": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                },
+                "size": {
+                  "fieldName": "total_products",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "total_products"
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "평균가격 vs 안전성 "
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 71,
+            "width": 6,
+            "height": 9
+          }
+        },
+        {
+          "widget": {
+            "name": "a132f798",
+            "multilineTextboxSpec": {
+              "lines": [
+                "csv 3"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 80,
+            "width": 6,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "7eff7600",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "b78b8a50",
+                  "fields": [
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    },
+                    {
+                      "name": "ea",
+                      "expression": "`ea`"
+                    },
+                    {
+                      "name": "tea",
+                      "expression": "`tea`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                },
+                "y": {
+                  "primary": {
+                    "fields": [
+                      {
+                        "fieldName": "ea",
+                        "displayName": "ea"
+                      }
+                    ],
+                    "scale": {
+                      "type": "quantitative"
+                    }
+                  },
+                  "secondary": {
+                    "fields": [
+                      {
+                        "fieldName": "tea",
+                        "displayName": "tea"
+                      }
+                    ],
+                    "scale": {
+                      "type": "quantitative"
+                    }
+                  }
+                }
+              },
+              "mark": {
+                "layout": "percent-stack"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 82,
+            "width": 6,
+            "height": 8
+          }
+        },
+        {
+          "widget": {
+            "name": "18966558",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "cc5fabc2",
+                  "fields": [
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    },
+                    {
+                      "name": "price",
+                      "expression": "`price`"
+                    },
+                    {
+                      "name": "stars",
+                      "expression": "`stars`"
+                    }
+                  ],
+                  "filters": [
+                    {
+                      "expression": "`category_type` NOT IN ('Others')"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "scatter",
+              "encodings": {
+                "x": {
+                  "fieldName": "price",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "price"
+                },
+                "y": {
+                  "fieldName": "stars",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "stars"
+                },
+                "color": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 90,
+            "width": 6,
+            "height": 14
+          }
+        },
+        {
+          "widget": {
+            "name": "89d6e648",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "d56728b6",
+                  "fields": [
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    },
+                    {
+                      "name": "total_products",
+                      "expression": "`total_products`"
+                    },
+                    {
+                      "name": "X_score",
+                      "expression": "`X_score`"
+                    },
+                    {
+                      "name": "Y_score",
+                      "expression": "`Y_score`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "scatter",
+              "encodings": {
+                "x": {
+                  "fieldName": "X_score",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "X_score"
+                },
+                "y": {
+                  "fieldName": "Y_score",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Y_score"
+                },
+                "color": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                },
+                "size": {
+                  "fieldName": "total_products",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "total_products"
+                }
+              },
+              "mark": {
+                "size": 0
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 104,
+            "width": 6,
+            "height": 13
+          }
+        },
+        {
+          "widget": {
+            "name": "20b8618f",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "7c2b0b50",
+                  "fields": [
+                    {
+                      "name": "sum(product_count)",
+                      "expression": "SUM(`product_count`)"
+                    },
+                    {
+                      "name": "category_type",
+                      "expression": "`category_type`"
+                    },
+                    {
+                      "name": "sum(correlation_reviews_stars)",
+                      "expression": "SUM(`correlation_reviews_stars`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "category_type",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "category_type"
+                },
+                "y": {
+                  "fieldName": "sum(correlation_reviews_stars)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Sum of correlation_reviews_stars"
+                },
+                "color": {
+                  "fieldName": "sum(product_count)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Sum of product_count"
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 117,
+            "width": 6,
+            "height": 11
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    }
+  }
+}
