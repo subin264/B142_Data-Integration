@@ -1,0 +1,249 @@
+id,category_name,category_type
+1,Beading & Jewelry Making,Jewelry_Accessories
+2,Fabric Decorating,Crafts_Sewing
+3,Knitting & Crochet Supplies,Crafts_Sewing
+4,Printmaking Supplies,Arts_Crafts
+5,Scrapbooking & Stamping Supplies,Arts_Crafts
+6,Sewing Products,Crafts_Sewing
+7,Craft & Hobby Fabric,Crafts_Sewing
+8,Needlework Supplies,Crafts_Sewing
+9,"Arts, Crafts & Sewing Storage",Crafts_Sewing
+10,"Painting, Drawing & Art Supplies",Arts_Crafts
+11,Craft Supplies & Materials,Others
+12,Gift Wrapping Supplies,Others
+13,Party Decorations,Party_Gifts
+14,Automotive Paint & Paint Supplies,Automotive
+15,Heavy Duty & Commercial Vehicle Equipment,Others
+16,Automotive Tires & Wheels,Automotive
+17,Automotive Tools & Equipment,Automotive
+18,Automotive Performance Parts & Accessories,Automotive
+19,Car Care,Automotive
+20,Oils & Fluids,Others
+21,Automotive Replacement Parts,Automotive
+22,"Lights, Bulbs & Indicators",Others
+23,Automotive Interior Accessories,Automotive
+24,Automotive Exterior Accessories,Automotive
+25,Automotive Enthusiast Merchandise,Automotive
+26,Car Electronics & Accessories,Electronics
+27,RV Parts & Accessories,Others
+28,Motorcycle & Powersports,Sports_Outdoors
+29,Baby Diapering Products,Baby_Kids
+30,Baby & Toddler Feeding Supplies,Baby_Kids
+31,Pregnancy & Maternity Products,Others
+32,Child Safety Car Seats & Accessories,Baby_Kids
+33,Baby Safety Products,Baby_Kids
+34,Toilet Training Products,Others
+35,Baby Care Products,Baby_Kids
+36,Baby Travel Gear,Baby_Kids
+38,Baby Activity & Entertainment Products,Baby_Kids
+39,Baby Gifts,Baby_Kids
+40,Baby Stationery,Baby_Kids
+41,"Nursery Furniture, Bedding & Décor",Others
+42,Baby,Baby_Kids
+43,Baby Boys' Clothing & Shoes,Baby_Kids
+44,Baby Strollers & Accessories,Baby_Kids
+45,Beauty & Personal Care,Health_Beauty
+46,Perfumes & Fragrances,Others
+47,Hair Care Products,Others
+48,Makeup,Others
+49,Skin Care Products,Others
+50,Beauty Tools & Accessories,Health_Beauty
+51,"Foot, Hand & Nail Care Products",Others
+52,Personal Care Products,Others
+53,Shaving & Hair Removal Products,Others
+54,Computer Servers,Electronics
+55,Data Storage,Others
+56,Computer Monitors,Electronics
+57,Computers & Tablets,Electronics
+58,Tablet Replacement Parts,Others
+60,Computer Networking,Electronics
+63,Computer Components,Electronics
+64,Tablet Accessories,Others
+65,Laptop Accessories,Electronics
+66,Computer External Components,Electronics
+68,Wearable Technology,Electronics
+69,Televisions & Video Products,Others
+70,GPS & Navigation,Others
+71,Headphones & Earbuds,Others
+72,Office Electronics,Electronics
+73,Portable Audio & Video,Others
+74,eBook Readers & Accessories,Others
+75,Cell Phones & Accessories,Others
+76,Accessories & Supplies,Others
+77,Video Projectors,Others
+78,Vehicle Electronics,Electronics
+79,Camera & Photo,Others
+80,Security & Surveillance Equipment,Others
+81,Computers,Electronics
+82,Home Audio & Theater Products,Home_Living
+83,Video Game Consoles & Accessories,Gaming
+84,Boys' Clothing,Baby_Kids
+87,Boys' Accessories,Baby_Kids
+88,Boys' Jewelry,Jewelry_Accessories
+89,Boys' Watches,Baby_Kids
+90,Boys' Shoes,Baby_Kids
+91,Girls' Clothing,Baby_Kids
+94,Girls' Accessories,Baby_Kids
+95,Girls' Jewelry,Jewelry_Accessories
+96,Girls' Watches,Baby_Kids
+97,Girls' Shoes,Baby_Kids
+98,Girls' School Uniforms,Baby_Kids
+99,Travel Duffel Bags,Travel_Bags
+100,Messenger Bags,Others
+101,Travel Tote Bags,Travel_Bags
+102,Garment Bags,Others
+103,Luggage Sets,Travel_Bags
+104,Suitcases,Others
+105,Travel Accessories,Travel_Bags
+106,Rain Umbrellas,Others
+107,Backpacks,Others
+108,Luggage,Travel_Bags
+109,Laptop Bags,Electronics
+110,Men's Clothing,Mens_Fashion
+112,Men's Accessories,Mens_Fashion
+113,Men's Watches,Mens_Fashion
+114,Men's Shoes,Mens_Fashion
+116,Women's Clothing,Mens_Fashion
+118,Women's Handbags,Mens_Fashion
+120,Women's Accessories,Mens_Fashion
+121,Women's Watches,Mens_Fashion
+122,Women's Shoes,Mens_Fashion
+123,Women's Jewelry,Jewelry_Accessories
+124,Kids' Furniture,Baby_Kids
+125,Gift Cards,Others
+126,Oral Care Products,Others
+127,Vision Products,Others
+128,Wellness & Relaxation Products,Others
+129,Baby & Child Care Products,Baby_Kids
+130,Household Supplies,Others
+131,Health Care Products,Health_Beauty
+132,Diet & Sports Nutrition,Sports_Outdoors
+133,Home Use Medical Supplies & Equipment,Home_Living
+134,Sexual Wellness Products,Others
+135,Health & Household,Health_Beauty
+136,Sports Nutrition Products,Sports_Outdoors
+137,Stationery & Gift Wrapping Supplies,Others
+138,Commercial Door Products,Others
+139,Power Transmission Products,Others
+140,Industrial Materials,Industrial_Science
+141,Industrial Hardware,Industrial_Science
+142,Abrasive & Finishing Products,Others
+143,"Industrial Adhesives, Sealants & Lubricants",Industrial_Science
+144,Material Handling Products,Others
+145,"Test, Measure & Inspect",Others
+146,Industrial Power & Hand Tools,Tools_Hardware
+147,"Hydraulics, Pneumatics & Plumbing",Others
+148,Filtration,Others
+149,Electronic Components,Others
+150,Lab & Scientific Products,Others
+151,Janitorial & Sanitation Supplies,Others
+152,Occupational Health & Safety Products,Health_Beauty
+153,Cutting Tools,Tools_Hardware
+154,Fasteners,Others
+155,Science Education Supplies,Others
+156,Food Service Equipment & Supplies,Others
+157,Additive Manufacturing Products,Others
+158,Professional Medical Supplies,Others
+159,Professional Dental Supplies,Others
+160,Packaging & Shipping Supplies,Others
+161,Retail Store Fixtures & Equipment,Others
+162,Industrial & Scientific,Industrial_Science
+163,Bath Products,Others
+164,Bedding,Others
+165,Home Décor Products,Home_Living
+166,Furniture,Others
+167,Household Cleaning Supplies,Others
+168,Seasonal Décor,Others
+169,Home Lighting & Ceiling Fans,Home_Living
+170,Kitchen & Dining,Home_Living
+171,"Heating, Cooling & Air Quality",Others
+172,Kids' Home Store,Baby_Kids
+173,Home Storage & Organization,Home_Living
+174,Wall Art,Others
+175,Vacuum Cleaners & Floor Care,Others
+176,Ironing Products,Others
+177,Party Supplies,Party_Gifts
+178,Pet Bird Supplies,Pet_Supplies
+179,Cat Supplies,Others
+180,Dog Supplies,Others
+181,Fish & Aquatic Pets,Pet_Supplies
+182,Horse Supplies,Others
+183,Reptiles & Amphibian Supplies,Others
+184,Small Animal Supplies,Others
+185,Smart Home: New Smart Devices,Home_Living
+186,Smart Home: Voice Assistants and Hubs,Home_Living
+187,Smart Home: Smart Locks and Entry,Home_Living
+188,Smart Home: Home Entertainment,Home_Living
+189,Smart Home: WiFi and Networking,Home_Living
+190,Smart Home: Security Cameras and Systems,Home_Living
+191,Smart Home: Lighting,Home_Living
+192,Smart Home: Plugs and Outlets,Home_Living
+193,Smart Home: Vacuums and Mops,Home_Living
+194,Smart Home Thermostats - Compatibility Checker,Home_Living
+195,Smart Home: Lawn and Garden,Home_Living
+196,Smart Home: Other Solutions,Home_Living
+197,Smart Home - Heating & Cooling,Home_Living
+198,Sports & Fitness,Sports_Outdoors
+199,Outdoor Recreation,Others
+200,Sports & Outdoors,Sports_Outdoors
+201,Home Appliances,Home_Living
+203,Pumps & Plumbing Equipment,Others
+204,"Paint, Wall Treatments & Supplies",Others
+205,Safety & Security,Others
+206,Light Bulbs,Others
+207,Power Tools & Hand Tools,Tools_Hardware
+208,Kitchen & Bath Fixtures,Home_Living
+209,Lighting & Ceiling Fans,Others
+210,Electrical Equipment,Others
+211,Hardware,Others
+212,Building Supplies,Others
+213,Measuring & Layout,Others
+214,Welding & Soldering,Others
+215,Tools & Home Improvement,Home_Living
+216,Kids' Party Supplies,Baby_Kids
+217,Toy Figures & Playsets,Toys_Games
+218,Novelty Toys & Amusements,Toys_Games
+219,Arts & Crafts Supplies,Arts_Crafts
+220,Building Toys,Toys_Games
+221,Dolls & Accessories,Others
+222,Kids' Electronics,Baby_Kids
+223,Games & Accessories,Gaming
+224,Learning & Education Toys,Toys_Games
+225,Kids' Dress Up & Pretend Play,Baby_Kids
+226,Puppets & Puppet Theaters,Pet_Supplies
+227,Puzzles,Others
+228,Sports & Outdoor Play Toys,Toys_Games
+229,Stuffed Animals & Plush Toys,Toys_Games
+230,Baby & Toddler Toys,Baby_Kids
+231,"Tricycles, Scooters & Wagons",Others
+232,Finger Toys,Toys_Games
+233,Toy Vehicle Playsets,Toys_Games
+234,Kids' Play Trains & Trams,Baby_Kids
+235,Kids' Play Trucks,Baby_Kids
+236,Kids' Play Cars & Race Cars,Baby_Kids
+237,Kids' Play Boats,Baby_Kids
+238,Kids' Play Buses,Baby_Kids
+239,Kids' Play Tractors,Baby_Kids
+240,"Slot Cars, Race Tracks & Accessories",Others
+241,"Sony PSP Games, Consoles & Accessories",Gaming
+242,"Nintendo DS Games, Consoles & Accessories",Gaming
+243,"PlayStation 3 Games, Consoles & Accessories",Gaming
+244,"Wii Games, Consoles & Accessories",Gaming
+245,"Xbox 360 Games, Consoles & Accessories",Gaming
+248,Mac Games & Accessories,Gaming
+249,"Nintendo 3DS & 2DS Consoles, Games & Accessories",Gaming
+250,Legacy Systems,Others
+251,"PlayStation Vita Games, Consoles & Accessories",Gaming
+252,"Wii U Games, Consoles & Accessories",Gaming
+253,"PlayStation 4 Games, Consoles & Accessories",Gaming
+254,"Xbox One Games, Consoles & Accessories",Gaming
+255,Video Games,Gaming
+256,Online Video Game Services,Gaming
+259,Virtual Reality Hardware & Accessories,Others
+260,"Nintendo Switch Consoles, Games & Accessories",Gaming
+261,"PlayStation 5 Consoles, Games & Accessories",Gaming
+262,"Xbox Series X & S Consoles, Games & Accessories",Gaming
+263,PC Games & Accessories,Gaming
+264,Baby Girls' Clothing & Shoes,Baby_Kids
+265,Boys' School Uniforms,Baby_Kids
+270,Toys & Games,Gaming
